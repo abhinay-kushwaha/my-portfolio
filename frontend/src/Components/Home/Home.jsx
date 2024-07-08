@@ -13,7 +13,7 @@ const Home = () => {
        backgroundRepeat: "no-repeat", 
        backgroundPosition: "center",
       }}
-      className=''>
+      className='relative -top-28'>
       <div className='flex lg:flex-row flex-col justify-center items-center gap-5 w-full lg:p-44 md:p-32 p-20 pt-28  '>
       <HomeOne/>
       <HomeTwo/>

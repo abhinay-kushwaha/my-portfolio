@@ -1,9 +1,10 @@
 import React from 'react'
+import "../../App.css"
 
 const PortfolioTwo = () => {
   return (
     <div className='relative -top-44'>
-      <div className='flex flex-col gap-24'>
+      <div className='flex flex-col md:gap-24 sm:gap-16 gap-6'>
 
        <div  className='md:p-32 sm:p-20 p-14  rounded-xl hover:scale-105 ease-in duration-300'
        style={{ 

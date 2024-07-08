@@ -19,3 +19,13 @@
 .spin-slow {
   animation: spinSlow 8s linear infinite;
 }
+
+/* @media screen and (max-width: 1100px) and (min-width: 720px) {
+  .aboutOne-big-img{
+    max-width: 520px;
+  }
+
+  .aboutOne-small-img{
+    width:2px ;
+  }
+} */
