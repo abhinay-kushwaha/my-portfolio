@@ -1,4 +1,5 @@
 import React from 'react'
+import FlipNumbers from 'react-flip-numbers';
 import '../../App.css'
 import abhi from "../../assets/abhi.jpeg"
 import trophy from "../../assets/trophy.png"
@@ -12,7 +13,17 @@ const HomeTwo = () => {
           <div className='hidden sm:block'>
           <div className='flex flex-col gap-72'>
             <div className='shadow-1 bg-white w-fit p-2 flex justify-center items-center gap-2 rounded-sm relative left-10 top-6'>
-              <h1 className='text-3xl font-bold text-blue-400'>1</h1>
+            <p className="whitespace-pre-wrap text-3xl font-bold text-blue-400">
+                <FlipNumbers
+                  height={35}
+                  width={20}
+                  color="blue" // Adjust as needed
+                  background="white"
+                  play
+                  perspective={3000}
+                  numbers="1"
+                />
+              </p>
               <h2 className='text-sm font-semibold leading-4 w-14'>Years of <br />
                 Success
               </h2>
@@ -31,7 +42,18 @@ const HomeTwo = () => {
               <img className='w-14 p-3  ' src={trophy} alt="" />
             </div>
             <div className='shadow-1 bg-white w-fit p-2 flex justify-center items-center gap-2 rounded-sm relative right-12'>
-            <h1 className=' font-bold text-red-500 flex items-start'><h2 className='text-3xl font-bold text-red-500'>2</h2> <span className='text-2xl'>+</span></h1>
+            <h1 className=' font-bold text-red-500 flex items-start'>
+            <p className="whitespace-pre-wrap text-3xl font-bold text-blue-400">
+                <FlipNumbers
+                  height={35}
+                  width={20}
+                  color="red" // Adjust as needed
+                  background="white"
+                  play
+                  perspective={3000}
+                  numbers="2"
+                />
+              </p> <span className='text-2xl'>+</span></h1>
               <h2 className='text-sm font-semibold leading-4'>Projects <br />
                 Completed
               </h2>

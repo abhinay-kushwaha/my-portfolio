@@ -13,7 +13,7 @@ const Routers = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout><Home/></Layout>} />
+          {/* <Route path="/" element={<Layout><Home/></Layout>} /> */}
           <Route path="/home" element={<Layout><Home/></Layout>} />
           <Route path="/about" element={<Layout><About/></Layout>} />
           <Route path="/portfolio" element={<Layout><Portfolio/></Layout>} />

@@ -2,7 +2,7 @@ import React from 'react'
 
 const ServiveSeven = () => {
   return (
-    <div>
+    <div className='lg:block hidden'>
       <div className='sm:grid grid-cols-7 '>
         <div></div>
         <div></div>

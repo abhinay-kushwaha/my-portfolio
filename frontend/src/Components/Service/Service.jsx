@@ -19,9 +19,12 @@ const Service = () => {
       <ServiveFour/>
       </div>
     </div>
-      <ServiveFive/>
+      <ServiveFive />
       <ServiveSix/>
+
+      <div className=''>
       <ServiveSeven/>
+      </div>
     <div  className='lg:px-44 md:px-32 sm:px-20 px-10 '>
       <ServiveEight/>
     </div>
