@@ -114,7 +114,7 @@ const Header = () => {
             <Link to="/service" onClick={closeMenu}><li className={`text-nowrap ${activeButton === "Service" ? "underline decoration-[#EE4F50] underline-offset-4 text-[#501c1c]" : ""}`}
               onClick={() => handleButtonClick("Service")}>Service</li></Link>
 
-            <Link to="/contact" onClick={closeMenu}><li className={`text-nowrap ${activeButton === "Contact" ? "underline decoration-[#EE4F50] underline-offset-4 text-[#501c1c]" : ""}`}
+            <Link to="/contacts" onClick={closeMenu}><li className={`text-nowrap ${activeButton === "Contact" ? "underline decoration-[#EE4F50] underline-offset-4 text-[#501c1c]" : ""}`}
               onClick={() => handleButtonClick("Contact")}>Contact</li></Link>
 
             <Link to="/blog" onClick={closeMenu}><li className={`text-nowrap ${activeButton === "Blog" ? "underline decoration-[#EE4F50] underline-offset-4 text-[#501c1c]" : ""}`}

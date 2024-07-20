@@ -5,14 +5,14 @@ import Footer from "./Footer";
 
 function Layout({ children }) {
   return (
-    <>
-        <Header />
+    <div className=" flex flex-col justify-between h-screen pt-28 ">
 
-     <div className=" flex flex-col justify-between h-screen pt-28 ">
-        <main>{children}</main>
-        <Footer/>
+     <div >
+        <Header />
+        <main className="  ">{children}</main>
       </div>
-    </>
+        <Footer/>
+    </div>
   );
 }
 export default Layout;

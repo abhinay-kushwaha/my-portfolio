@@ -10,7 +10,7 @@ import i8 from "../../assets/8.png"
 
 const ServiveEight = () => {
   return (
-    <div className='my-10'>
+    <div className='my-10 '>
       <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2'>
          <div className='flex justify-center items-center h-56 border'><img className='w-16 ' src={i1} /></div>
          <div className='flex justify-center items-center h-56 border'><img className='w-16 ' src={i2} /></div>
