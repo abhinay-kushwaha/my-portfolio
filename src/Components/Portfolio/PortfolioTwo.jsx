@@ -2,6 +2,10 @@ import React, { useEffect } from 'react'
 import "../../App.css"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import port1 from "../../assets/portfolio-bg-1.jpg"
+import port2 from "../../assets/portfolio-bg-2.jpg"
+import port3 from "../../assets/portfolio-bg-3.jpg"
+import port4 from "../../assets/portfolio-bg-4.jpg"
 
 const PortfolioTwo = () => {
   useEffect(() => {
@@ -13,7 +17,7 @@ const PortfolioTwo = () => {
 
        <div data-aos="flip-left" className='md:p-32 sm:p-20 p-14  rounded-xl hover:scale-105 ease-in duration-300'
        style={{ 
-      backgroundImage: "url('../src/assets/portfolio-bg-1.jpg')",
+      backgroundImage: `url(${port1})`,
       backgroundSize: "cover",
        backgroundRepeat: "no-repeat", 
        backgroundPosition: "center",
@@ -27,7 +31,7 @@ const PortfolioTwo = () => {
 
        <div data-aos="flip-right" className='md:p-32 sm:p-20 p-14  rounded-xl hover:scale-105 ease-in-out duration-300 flex justify-end '
        style={{ 
-      backgroundImage: "url('../src/assets/portfolio-bg-2.jpg')",
+      backgroundImage: `url(${port2})`,
       backgroundSize: "cover",
        backgroundRepeat: "no-repeat", 
        backgroundPosition: "center",
@@ -41,7 +45,7 @@ const PortfolioTwo = () => {
 
        <div data-aos="flip-up" className='md:p-32 sm:p-20 p-14  rounded-xl hover:scale-105 ease-in-out duration-300'
        style={{ 
-      backgroundImage: "url('../src/assets/portfolio-bg-3.jpg')",
+      backgroundImage:`url(${port3})`,
       backgroundSize: "cover",
        backgroundRepeat: "no-repeat", 
        backgroundPosition: "center",
@@ -55,7 +59,7 @@ const PortfolioTwo = () => {
 
        <div data-aos="flip-down" className='md:p-32 sm:p-20 p-14  rounded-xl hover:scale-105 ease-in-out duration-300  flex justify-end'
        style={{ 
-      backgroundImage: "url('../src/assets/portfolio-bg-4.jpg')",
+      backgroundImage: `url(${port4})`,
       backgroundSize: "cover",
        backgroundRepeat: "no-repeat", 
        backgroundPosition: "center",

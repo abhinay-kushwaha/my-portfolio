@@ -13,6 +13,8 @@ import { useLocation } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
+import homeBg from '../../assets/home-bg.jpg';
+
 const Home = () => {
   const location = useLocation();
 
@@ -26,7 +28,7 @@ const Home = () => {
   return (
  <>
     <div style={{ 
-      backgroundImage: "url('../src/assets/home-bg.jpg')",
+      backgroundImage: `url(${homeBg})`,
       backgroundSize: "cover",
        backgroundRepeat: "no-repeat", 
        backgroundPosition: "center",
