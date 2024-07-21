@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import i1 from "../../assets/1.png"
 import i2 from "../../assets/2.png"
 import i3 from "../../assets/3.png"
@@ -7,10 +7,15 @@ import i5 from "../../assets/5.png"
 import i6 from "../../assets/6.png"
 import i7 from "../../assets/7.png"
 import i8 from "../../assets/8.png"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ServiveEight = () => {
+  useEffect(() => {
+    AOS.init();
+}, []);
   return (
-    <div className='my-10 '>
+    <div data-aos="flip-up" className='my-10 '>
       <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2'>
          <div className='flex justify-center items-center h-56 border'><img className='w-16 ' src={i1} /></div>
          <div className='flex justify-center items-center h-56 border'><img className='w-16 ' src={i2} /></div>

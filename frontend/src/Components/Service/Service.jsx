@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ServiceOne from './ServiceOne'
 import ServiceTwo from './ServiceTwo'
 import ServiceThree from './ServiceThree'
@@ -7,8 +7,14 @@ import ServiveFive from './ServiveFive'
 import ServiveSix from './ServiveSix'
 import ServiveSeven from './ServiveSeven'
 import ServiveEight from './ServiveEight'
+import { useLocation } from 'react-router-dom'
 
 const Service = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
   <>
       <ServiceOne/>

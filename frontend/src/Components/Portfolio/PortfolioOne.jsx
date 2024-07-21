@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../../App.css"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const PortfolioOne = () => {
+  useEffect(() => {
+    AOS.init();
+}, []);
   return (
     <div className=''>
-      <div className='flex flex-col  items-center gap-3 px-10 mb-3'>
+      <div  data-aos="fade-down" className='flex flex-col  items-center gap-3 px-10 mb-3'>
         <h1 className='text-red-500 font-semibold text-xl'>Portfolio</h1>
         <h2 className='font-bold text-4xl'>My Amazing Works</h2>
         <p className='text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione libero blanditiis est perferendis sit quam?</p>

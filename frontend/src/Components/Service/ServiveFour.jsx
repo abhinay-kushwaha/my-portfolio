@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { LuPlus } from "react-icons/lu";
 import { IoClose } from "react-icons/io5";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
  
 
 const ServiveFour = () => {
+  useEffect(() => {
+    AOS.init();
+}, []);
  
   
   const [openIndex, setOpenIndex] = useState(null);
@@ -18,7 +23,7 @@ const ServiveFour = () => {
 
   return (
     <div  className='flex justify-center items-center'>
-      <div className='flex flex-col gap-3 w-full'>
+      <div data-aos="flip-up" className='flex flex-col gap-3 w-full'>
        
 
 

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa'; // Make sure to import the icons
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -49,10 +50,16 @@ const Contact = () => {
     }
   };
 
+  useEffect(() => {
+    AOS.init();
+}, []);
+
   return (
     <div className="flex flex-col md:flex-row gap-8 p-8  items-center justify-center ">
       {/* Contact Form */}
-      <div className="w-full md:w-1/2 lg:w-1/3">
+      <div  data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" className="w-full md:w-1/2 lg:w-1/3">
         <form
           onSubmit={handleSubmit}
           className={`bg-white p-6 rounded-lg shadow-lg transition-transform transform ${submitStatus === 'Success! Your message has been sent.' ? 'animate-pulse' : ''} ${submitStatus === 'Something went wrong. Please try again.' ? 'animate-shake' : ''}`}
@@ -104,7 +111,10 @@ const Contact = () => {
       </div>
 
       {/* Contact Information */}
-      <div className="w-full md:w-1/2 lg:w-1/3 bg-white p-6 rounded-lg shadow-lg transition-opacity duration-500 opacity-100 animate-fadeIn">
+      <div data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500" className="w-full md:w-1/2 lg:w-1/3 bg-white p-6 rounded-lg shadow-lg transition-opacity duration-500 opacity-100 animate-fadeIn">
         <h2 className="text-2xl font-semibold mb-4 text-gray-900">Contact Us</h2>
         <p className="text-gray-600 mb-2 flex items-center">
           <FaMapMarkerAlt className="text-blue-500 mr-2 animate-bounce" />

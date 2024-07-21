@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import dedi from "../../assets/Dedication.svg"
 import smart from "../../assets/development.png"
 import inte from "../../assets/Intelligence.png"
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 const HomeThree = () => {
+  useEffect(() => {
+    AOS.init();
+}, []);
   return (
     <div className=' grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8'>
-      <div className='p-2  rounded-md'>
+
+      <div data-aos="fade-right" className='p-2  rounded-md'>
         <div className='flex justify-between items-center'>
           <div className='text-xl font-semibold'>
             <h1 className=' text-red-500 font-bold'>01</h1>
@@ -23,7 +28,8 @@ const HomeThree = () => {
           </p>
         </div>
       </div>
-      <div className='p-2  rounded-md'>
+
+      <div data-aos="fade-down" className='p-2  rounded-md'>
         <div className='flex justify-between items-center'>
           <div className='text-xl font-semibold'>
             <h1 className=' text-red-500 text-sm font-bold'>02</h1>
@@ -40,7 +46,8 @@ const HomeThree = () => {
           </p>
         </div>
       </div>
-      <div className='p-2  rounded-md'>
+
+      <div data-aos="fade-left" className='p-2  rounded-md'>
         <div className='flex justify-between items-center'>
           <div className='text-xl font-semibold'>
             <h1 className=' text-red-500 text-sm font-bold'>03</h1>

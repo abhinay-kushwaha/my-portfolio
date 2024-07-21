@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../App.css'
 
 const AboutTwo = () => {
   return (
@@ -8,7 +9,7 @@ const AboutTwo = () => {
         <h2 className='font-semibold text-4xl'>I Develop Application that Help People</h2>
         <p className='text-justify'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati inventore maxime ipsa laboriosam commodi, est adipisci sunt, suscipit perferendis voluptatibus repellat molestias porro voluptas. Sequi!</p>
         <p className='text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, adipisci culpa provident quisquam inventore id.</p>
-        <button className='bg-[#142EB5] hover:bg-[#FB503B] p-2 px-4 rounded-full text-white font-semibold w-fit'>View Portfolio</button>
+        <button className='bg-[#142EB5] hover:bg-[#FB503B] p-2 px-4 rounded-full text-white font-semibold w-fit shadow-1'>View Portfolio</button>
       </div>
     </div>
   )

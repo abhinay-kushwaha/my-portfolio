@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../App.css'
 
 const HomeOne = () => {
   return (
@@ -11,7 +12,7 @@ const HomeOne = () => {
            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, aliquam dicta quod minima esse dolorum. Similique fugiat id saepe est.
         </p>
       <div className='text-xl flex gap-7 font-semibold'>
-        <button className='bg-[#142EB5] hover:bg-[#FB503B] p-2 px-4 rounded-full'>Get a Quote</button>
+        <button className='bg-[#142EB5] hover:bg-[#FB503B] p-2 px-4 rounded-full shadow-1'>Get a Quote</button>
         <button>About Me</button>
       </div>
      </div>

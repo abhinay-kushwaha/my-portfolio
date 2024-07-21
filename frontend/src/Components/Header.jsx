@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import { IoMenu, IoClose } from "react-icons/io5";
 import logo from "../assets/logo.jpg";
+import '../App.css'
 
 
 const Header = () => {
@@ -34,7 +35,7 @@ const Header = () => {
       "/about": "About",
       "/portfolio": "Portfolio",
       "/service": "Service",
-      "/contact": "Contact",
+      "/contacts": "Contact",
       "/blog": "Blog",
     };
     setActiveButton(pathMap[location.pathname] || null);
@@ -92,7 +93,7 @@ const Header = () => {
         </div>
         
         {/* Menu Button for Small screen */}
-        <div className="flex items-center gap-3 md:hidden">
+        <div className="flex  items-center gap-3 md:hidden">
           <button className='text-3xl' onClick={toggleMenu}>
             {isMenuOpen ? <IoClose className='text-[#333] absolute right-3 top-4 hover:text-[#5f4fee] transition transform hover:rotate-90 text-4xl font-bold' /> : <IoMenu className='text-[#333] hover:text-[#EE4F50] transition' />}
           </button>
@@ -119,7 +120,7 @@ const Header = () => {
 
             <Link to="/blog" onClick={closeMenu}><li className={`text-nowrap ${activeButton === "Blog" ? "underline decoration-[#EE4F50] underline-offset-4 text-[#501c1c]" : ""}`}
               onClick={() => handleButtonClick("Blog")}>Blog</li></Link>
-          <button className='bg-[#FB503B] hover:bg-[#142EB5] text-white p-2 px-4 font-bold rounded-full'>Download CV</button>
+          <button className='bg-[#FB503B] hover:bg-[#142EB5] text-white p-2 px-4 font-bold rounded-full shadow-1'>Download CV</button>
           </ul>
         </div>
       </header>

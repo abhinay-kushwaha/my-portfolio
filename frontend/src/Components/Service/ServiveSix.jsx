@@ -1,18 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import test1 from "../../assets/test-1.jpg"
+import test2 from "../../assets/test-2.jpg"
+import test3 from "../../assets/test-3.jpg"
+import test4 from "../../assets/test-4.jpg"
+import test5 from "../../assets/test-5.jpg"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // Dummy data for carousel slides
 const slideData = [
-  { id: 1, title: 'Slide 1', description: 'Content for slide 1', image: 'https://via.placeholder.com/800x400?text=Slide+1' },
-  { id: 2, title: 'Slide 2', description: 'Content for slide 2', image: 'https://via.placeholder.com/800x400?text=Slide+2' },
-  { id: 3, title: 'Slide 3', description: 'Content for slide 3', image: 'https://via.placeholder.com/800x400?text=Slide+3' },
-  { id: 4, title: 'Slide 4', description: 'Content for slide 4', image: 'https://via.placeholder.com/800x400?text=Slide+4' },
-  { id: 5, title: 'Slide 5', description: 'Content for slide 5', image: 'https://via.placeholder.com/800x400?text=Slide+5' },
+  { id: 1, title: 'Slide 1', description: 'Content for slide 1', image: test1 },
+  { id: 2, title: 'Slide 2', description: 'Content for slide 2', image: test2 },
+  { id: 3, title: 'Slide 3', description: 'Content for slide 3', image: test3 },
+  { id: 4, title: 'Slide 4', description: 'Content for slide 4', image: test4 },
+  { id: 5, title: 'Slide 5', description: 'Content for slide 5', image: test5 },
 ];
 
 const ServiceSix = () => {
+  useEffect(() => {
+    AOS.init();
+}, []);
   // Carousel settings
   const settings = {
     dots: true, // Show dots for navigation
@@ -25,8 +35,8 @@ const ServiceSix = () => {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 py-8">
-      <Slider {...settings}>
+    <div data-aos="flip-up" className="w-full max-w-4xl mx-auto px-4 py-8">
+      <Slider   {...settings}>
         {slideData.map((slide) => (
           <div key={slide.id} className="relative">
             <img src={slide.image} alt={slide.title} className="w-full h-auto object-cover rounded-lg shadow-md" />
