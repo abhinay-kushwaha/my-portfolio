@@ -11,7 +11,7 @@ const HomeThree = () => {
   return (
     <div className=' grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8'>
 
-      <div data-aos="fade-right" className='p-2  rounded-md'>
+      <div data-aos="fade-up" className='p-2  rounded-md'>
         <div className='flex justify-between items-center'>
           <div className='text-xl font-semibold'>
             <h1 className=' text-red-500 font-bold'>01</h1>
@@ -47,7 +47,7 @@ const HomeThree = () => {
         </div>
       </div>
 
-      <div data-aos="fade-left" className='p-2  rounded-md'>
+      <div data-aos="fade-up" className='p-2  rounded-md'>
         <div className='flex justify-between items-center'>
           <div className='text-xl font-semibold'>
             <h1 className=' text-red-500 text-sm font-bold'>03</h1>

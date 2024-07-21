@@ -111,7 +111,7 @@ const Contact = () => {
       </div>
 
       {/* Contact Information */}
-      <div data-aos="fade-left"
+      <div data-aos="fade-up"
      data-aos-anchor="#example-anchor"
      data-aos-offset="500"
      data-aos-duration="500" className="w-full md:w-1/2 lg:w-1/3 bg-white p-6 rounded-lg shadow-lg transition-opacity duration-500 opacity-100 animate-fadeIn">

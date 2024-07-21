@@ -35,7 +35,7 @@ const ServiceSix = () => {
   };
 
   return (
-    <div data-aos="flip-up" className="w-full max-w-4xl mx-auto px-4 py-8">
+    <div className="w-full max-w-4xl mx-auto px-4 py-8">
       <Slider   {...settings}>
         {slideData.map((slide) => (
           <div key={slide.id} className="relative">
