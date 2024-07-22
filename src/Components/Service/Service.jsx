@@ -18,9 +18,9 @@ const Service = () => {
   return (
   <>
       <ServiceOne/>
-    <div className='lg:px-44 md:px-32 sm:px-20 px-10 '>
+    <div className='lg:px-36 md:px-24 sm:px-16 px-4 '>
       <ServiceTwo/>
-      <div className='grid md:grid-cols-2 grid-cols-1 gap-3'>
+      <div className='grid md:grid-cols-2 grid-cols-1 gap-3 -mt-36'>
       <ServiceThree/>
       <ServiveFour/>
       </div>
@@ -34,7 +34,7 @@ const Service = () => {
       <div className=''>
       <ServiveSeven/>
       </div>
-    <div  className='lg:px-44 md:px-32 sm:px-20 px-10 '>
+    <div  className='lg:px-36 md:px-24 sm:px-16 px-4 '>
       <ServiveEight/>
     </div>
   </>

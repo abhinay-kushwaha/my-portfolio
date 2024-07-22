@@ -8,7 +8,7 @@ const ServiveFive = () => {
        <div className='col-span-3 flex flex-col justify-center items-center gap-3'>
         <h1 className='font-bold text-red-600'>Testimonial</h1>
         <h2 className='font-bold text-4xl '>What Clients Say</h2>
-        <p className='text-center p-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatum, in incidunt quia tenetur odit!</p>
+        <p className='text-center p-2'>Here’s what our clients have to say about their experiences working with us. </p>
        </div>
        <div className='hidden md:block'></div>
       </div>

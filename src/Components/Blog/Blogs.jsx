@@ -9,7 +9,7 @@ const Blogs = () => {
     window.scrollTo(0, 0);
   }, [location]);
   return (
-    <div>
+    <div className='lg:px-36 md:px-24 sm:px-16 px-4 '>
       <BlogsOne/>
     </div>
   )

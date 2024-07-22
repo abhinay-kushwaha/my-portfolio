@@ -118,16 +118,21 @@ const Contact = () => {
         <h2 className="text-2xl font-semibold mb-4 text-gray-900">Contact Us</h2>
         <p className="text-gray-600 mb-2 flex items-center">
           <FaMapMarkerAlt className="text-blue-500 mr-2 animate-bounce" />
-          <strong>Address:</strong> 1234 Elm Street, Springfield, IL 62704
+          <strong>Address:</strong> Vijay Nagar, Indore (M.P.)
         </p>
         <p className="text-gray-600 mb-2 flex items-center">
-          <FaEnvelope className="text-red-500 mr-2 animate-bounce" />
-          <strong>Email:</strong> contact@example.com
+          <a href="mailto:abhinayarkb0@gmail.com" className="flex items-center text-gray-600">
+            <FaEnvelope className="text-red-500 mr-2 animate-bounce" />
+            <strong>Email:</strong> abhinayarkb0@gmail.com
+          </a>
         </p>
         <p className="text-gray-600 flex items-center">
-          <FaPhoneAlt className="text-green-500 mr-2 animate-bounce" />
-          <strong>Phone:</strong> (123) 456-7890
+          <a href="tel:+91584987950" className="flex items-center text-gray-600">
+            <FaPhoneAlt className="text-green-500 mr-2 animate-bounce" />
+            <strong>Phone:</strong> (958) 498-7950
+          </a>
         </p>
+
       </div>
     </div>
   );

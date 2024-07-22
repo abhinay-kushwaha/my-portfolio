@@ -51,7 +51,7 @@ const HomeTwo = () => {
                   background="white"
                   play
                   perspective={3000}
-                  numbers="2"
+                  numbers="6"
                 />
               </p> <span className='text-2xl'>+</span></h1>
               <h2 className='text-sm font-semibold leading-4'>Projects <br />

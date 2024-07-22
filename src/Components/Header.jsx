@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { IoMenu, IoClose } from "react-icons/io5";
 import logo from "../assets/logo.jpg";
 import '../App.css'
+import DownloadCV from './DownloadCV';
 
 
 const Header = () => {
@@ -120,7 +121,7 @@ const Header = () => {
 
             <Link to="/blog" onClick={closeMenu}><li className={`text-nowrap ${activeButton === "Blog" ? "underline decoration-[#EE4F50] underline-offset-4 text-[#501c1c]" : ""}`}
               onClick={() => handleButtonClick("Blog")}>Blog</li></Link>
-          <button className='bg-[#FB503B] hover:bg-[#142EB5] text-white p-2 px-4 font-bold rounded-full shadow-1'>Download CV</button>
+          < DownloadCV/>
           </ul>
         </div>
       </header>

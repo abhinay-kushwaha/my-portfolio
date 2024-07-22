@@ -34,7 +34,7 @@ const Home = () => {
        backgroundPosition: "center",
       }}
       className='relative -top-28'>
-      <div data-aos="fade-down" className='flex lg:flex-row flex-col justify-center items-center gap-5 w-full lg:p-44 md:p-32 p-20 pt-28  '>
+      <div   className='flex lg:flex-row flex-col justify-center items-center gap-5 w-full lg:px-36 md:px-24 sm:px-16 px-4  lg:p-44 md:p-32 p-20 pt-28  '>
       <HomeOne/>
       <HomeTwo/>
       </div>
@@ -43,12 +43,12 @@ const Home = () => {
       
 
     </div>
-    <div className='lg:px-44 md:px-32 sm:px-20 px-10 p-44 '>
+    <div className='lg:px-36 md:px-24 sm:px-16 px-4  '>
       <HomeThree/>
 
     </div>
 
-    <div>
+    <div className='mt-32 flex flex-col gap-5'>
       <About/>
       <Portfolio/>
       <Service/>

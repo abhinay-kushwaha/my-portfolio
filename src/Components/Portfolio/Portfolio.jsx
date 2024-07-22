@@ -14,7 +14,7 @@ const Portfolio = () => {
   return (
   <>
       <PortfolioOne/>
-    <div className='lg:px-44 md:px-32 sm:px-20 px-10 '>
+    <div className='lg:px-36 md:px-24 sm:px-16 px-4 '>
       <PortfolioTwo/>
     </div>
       <PortfolioThree/>

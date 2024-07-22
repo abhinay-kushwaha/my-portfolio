@@ -7,11 +7,11 @@ const ServiceThree = () => {
     AOS.init();
 }, []);
   return (
-    <div className='flex justify-center items-start'>
-      <div data-aos="flip-down" className='flex flex-col gap-2'>
+    <div   className='mt-5 flex justify-center items-start'>
+      <div className='flex flex-col gap-2'>
        <h1 className='font-bold text-red-600'>Working to make difference</h1>
        <h2 className='font-bold text-4xl'>Real Passion to create Amazing Things</h2>
-       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe cumque, maxime repellendus ut hic dignissimos alias eaque ex in doloribus!</p>
+       <p className='text-justify'>In every project and initiative, my goal is to create meaningful impact and drive positive change. I am dedicated to using my skills and expertise to make a difference, whether through innovative solutions, social responsibility, or enhancing the lives of users.</p>
       </div>
     </div>
   )

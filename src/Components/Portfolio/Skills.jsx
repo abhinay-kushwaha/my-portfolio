@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Container, Grid, LinearProgress, Typography } from '@mui/material';
-import './Skills.css'; // Make sure to import the CSS file
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+ 
+ 
 const skills = [
   { skill: 'WordPress', percentage: 95 },
   { skill: 'Joomla', percentage: 75 },
@@ -14,9 +13,7 @@ const skills = [
 
 const Skills = () => {
 
-  useEffect(() => {
-    AOS.init();
-}, []);
+ 
   const [progress, setProgress] = useState(skills.map(() => 0));
 
   useEffect(() => {
@@ -35,11 +32,11 @@ const Skills = () => {
 
   return (
     <div  className='-mt-56'>
-      <div data-aos="zoom-in">
+      <div  >
         <div className='flex flex-col items-center gap-3 px-10 pt-16 sm:pt-0'>
           <h1 className='text-red-500 font-semibold text-xl'>My Skills</h1>
           <h2 className='font-bold text-4xl'>I Develop Skills Regularly</h2>
-          <p className='text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione libero blanditiis est perferendis sit quam?</p>
+          <p className='text-center'>In the fast-paced world of web development, staying ahead requires continuous learning and skill enhancement. I am committed to regularly developing and refining my skills to keep up with the latest technologies and industry trends.</p>
 
           <Container>
             <Grid container spacing={4}>
