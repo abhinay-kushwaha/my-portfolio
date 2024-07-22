@@ -3,12 +3,12 @@ import { Box, Container, Grid, LinearProgress, Typography } from '@mui/material'
  
  
 const skills = [
-  { skill: 'WordPress', percentage: 95 },
-  { skill: 'Joomla', percentage: 75 },
-  { skill: 'Drupal', percentage: 90 },
-  { skill: 'Python', percentage: 70 },
-  { skill: 'PHP', percentage: 80 },
-  { skill: 'JavaScript', percentage: 60 }
+  { skill: 'JavaScript', percentage: 60 },
+  { skill: 'React & Redux', percentage: 85 },
+  { skill: 'Next js', percentage: 75 },
+  { skill: 'Java', percentage: 80 },
+  { skill: 'DSA', percentage: 50 },
+  { skill: 'Python', percentage: 60 },
 ];
 
 const Skills = () => {
