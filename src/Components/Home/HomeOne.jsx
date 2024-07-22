@@ -1,13 +1,16 @@
 import React from 'react'
 import '../../App.css'
 import { Link } from 'react-router-dom'
+import Name from './Name'
+
 
 const HomeOne = () => {
   return (
     <div className='   flex justify-center items-center xl:pl-16'>
      <div className='flex flex-col gap-4 font-bold text-[#f6f3f3]'>
      <h1 className='text-3xl'>Hello I'm</h1>
-      <h2 className='text-5xl '>Abhinay Kushwaha ,</h2>
+     <Name/>
+      {/* <h2 className='text-5xl '>Abhinay Kushwaha ,</h2> */}
       {/* <h3 className='text-2xl'>MERN Developer</h3> */}
         <p className='font-normal'>
         a passionate MERN stack developer with a knack for creating dynamic and responsive web applications. Welcome to my  portfolio, where I showcase my skills, projects, and journey in the world of web development.
