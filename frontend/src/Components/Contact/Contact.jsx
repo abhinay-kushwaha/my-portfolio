@@ -23,15 +23,15 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('Submitting...');
-
+  
     try {
       const result = await emailjs.send(
-        'your_service_id', // Replace with your service ID
-        'your_template_id', // Replace with your template ID
+        'service_n0m18wp', // Your actual service ID
+        'template_b2bgq15', // Your actual template ID
         formData,
-        'your_user_id' // Replace with your user ID
+        '68dwCcQ5CjBj9CJO2' // Your public key
       );
-
+  
       console.log('Form Data:', result);
       setSubmitStatus('Success! Your message has been sent.');
       setFormData({
@@ -47,6 +47,7 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
+  
 
   useEffect(() => {
     AOS.init();
