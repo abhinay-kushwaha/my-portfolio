@@ -1,0 +1,76 @@
+import React, { useEffect } from 'react'
+import "../../App.css"
+ 
+import port1 from "../../assets/portfolio-bg-1.jpg"
+import port2 from "../../assets/portfolio-bg-2.jpg"
+import port3 from "../../assets/portfolio-bg-3.jpg"
+import port4 from "../../assets/portfolio-bg-4.jpg"
+
+const PortfolioTwo = () => {
+ 
+  return (
+    <div className='relative -top-44'>
+      <div className='flex flex-col md:gap-24 sm:gap-16 gap-6'>
+
+       <div   className='md:p-32 sm:p-20 p-14  rounded-xl hover:scale-105 ease-in duration-300'
+       style={{ 
+      backgroundImage: `url(${port1})`,
+      backgroundSize: "cover",
+       backgroundRepeat: "no-repeat", 
+       backgroundPosition: "center",
+      }}>
+          <div className='   flex flex-col gap-3 md:gap-6'>
+              <h1 className='text-red-500 font-semibold text-lg md:text-xl'>YouTube</h1>
+              <h2 className='font-bold text-2xl md:text-4xl text-white'>Web Application for Desiverse</h2>
+              <a className='font-semibold flex justify-start items-center text-white' href="#">VIEW PROJECT <span>👉</span></a>
+            </div>
+       </div>
+
+       <div   className='md:p-32 sm:p-20 p-14  rounded-xl hover:scale-105 ease-in-out duration-300 flex justify-end '
+       style={{ 
+      backgroundImage: `url(${port2})`,
+      backgroundSize: "cover",
+       backgroundRepeat: "no-repeat", 
+       backgroundPosition: "center",
+      }}>
+          <div className='   flex flex-col   gap-3 md:gap-6'>
+              <h1 className='text-red-500 font-semibold text-lg md:text-xl'>Vimeo</h1>
+              <h2 className='font-bold text-2xl md:text-4xl text-white'>Web Application for Desiverse</h2>
+              <a className='font-semibold flex justify-start items-center text-white' href="#">VIEW PROJECT <span>👉</span></a>
+            </div>
+       </div>
+
+       <div   className='md:p-32 sm:p-20 p-14  rounded-xl hover:scale-105 ease-in-out duration-300'
+       style={{ 
+      backgroundImage:`url(${port3})`,
+      backgroundSize: "cover",
+       backgroundRepeat: "no-repeat", 
+       backgroundPosition: "center",
+      }}>
+          <div className='   flex flex-col gap-3 md:gap-6'>
+              <h1 className='text-red-500 font-semibold text-lg md:text-xl'>SoundCloud</h1>
+              <h2 className='font-bold text-2xl md:text-4xl text-white'>Web Application for Desiverse</h2>
+              <a className='font-semibold flex justify-start items-center text-white' href="#">VIEW PROJECT <span>👉</span></a>
+            </div>
+       </div>
+
+       <div   className='md:p-32 sm:p-20 p-14  rounded-xl hover:scale-105 ease-in-out duration-300  flex justify-end'
+       style={{ 
+      backgroundImage: `url(${port4})`,
+      backgroundSize: "cover",
+       backgroundRepeat: "no-repeat", 
+       backgroundPosition: "center",
+      }}>
+          <div className='   flex flex-col gap-3 md:gap-6'>
+              <h1 className='text-red-500 font-semibold text-lg md:text-xl'>Details</h1>
+              <h2 className='font-bold text-2xl md:text-4xl text-white'>Web Application for Desiverse</h2>
+              <a className='font-semibold flex justify-start items-center text-white' href="#">VIEW PROJECT <span>👉</span></a>
+            </div>
+       </div>
+
+      </div>
+    </div>
+  )
+}
+
+export default PortfolioTwo
