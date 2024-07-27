@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa'; // Import the icons
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import emailjs from 'emailjs-com'; // Import EmailJS
+import axios from 'axios';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '', // Add phone number field
+    phone: '',
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -23,31 +23,25 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('Submitting...');
-  
+
     try {
-      const result = await emailjs.send(
-        'service_n0m18wp', // Your actual service ID
-        'template_b2bgq15', // Your actual template ID
-        formData,
-        '68dwCcQ5CjBj9CJO2' // Your public key
-      );
-  
-      console.log('Form Data:', result);
+      const response = await axios.post('http://localhost:3000/send-email', formData);
+      console.log('Form Data Sent:', formData);
+      console.log('Response:', response.data);
       setSubmitStatus('Success! Your message has been sent.');
       setFormData({
         name: '',
         email: '',
-        phone: '', // Clear phone number field
+        phone: '',
         message: '',
       });
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error Sending Email:', error);
       setSubmitStatus('Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
   };
-  
 
   useEffect(() => {
     AOS.init();
@@ -82,6 +76,7 @@ const Contact = () => {
               onChange={handleChange}
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 ease-in-out"
               placeholder="Enter your name"
+              required
             />
           </div>
           <div className="mb-4">
@@ -96,6 +91,7 @@ const Contact = () => {
               onChange={handleChange}
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 ease-in-out"
               placeholder="Enter your email"
+              required
             />
           </div>
           <div className="mb-4">
@@ -110,6 +106,7 @@ const Contact = () => {
               onChange={handleChange}
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 ease-in-out"
               placeholder="Enter your phone number"
+              required
             />
           </div>
           <div className="mb-4">
@@ -123,6 +120,7 @@ const Contact = () => {
               onChange={handleChange}
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 ease-in-out"
               placeholder="Enter your message"
+              required
             />
           </div>
           <button
@@ -147,22 +145,43 @@ const Contact = () => {
         className="w-full md:w-1/2 lg:w-1/3 bg-white p-6 rounded-lg shadow-lg transition-opacity duration-500 opacity-100 animate-fadeIn"
       >
         <h2 className="text-2xl font-semibold mb-4 text-gray-900">Contact Us</h2>
-        <p className="text-gray-600 mb-2 flex items-center">
-          <FaMapMarkerAlt className="text-blue-500 mr-2 animate-bounce" />
-          <strong>Address:</strong> Vijay Nagar, Indore (M.P.)
-        </p>
-        <p className="text-gray-600 mb-2 flex items-center">
-          <a href="mailto:abhinayark0@gmail.com" className="flex items-center text-gray-600">
+
+        <table>
+         <tbody>
+          <tr>
+            <th className='flex items-center pr-1'>  
+              <FaMapMarkerAlt className="text-blue-500 mr-2 animate-bounce" />
+              <strong>Address</strong>
+            </th>
+            <td> : Vijay Nagar, Indore (M.P.)</td>
+          </tr>
+          <tr>
+            <th className='flex items-center pr-1'> 
             <FaEnvelope className="text-red-500 mr-2 animate-bounce" />
-            <strong>Email:</strong> abhinayark0@gmail.com
-          </a>
-        </p>
-        <p className="text-gray-600 flex items-center">
-          <a href="tel:+91584987950" className="flex items-center text-gray-600">
-            <FaPhoneAlt className="text-green-500 mr-2 animate-bounce" />
-            <strong>Phone:</strong> (958) 498-7950
-          </a>
-        </p>
+            <strong>Email</strong>
+            </th>
+            <td>
+                <a href="mailto:abhinayark0@gmail.com" className="flex items-center text-gray-600">: 
+                  abhinayark0@gmail.com
+                </a>
+              </td>
+          </tr>
+          <tr>
+           <th className='flex items-center pr-1'> 
+           <FaPhoneAlt className="text-green-500 mr-2 animate-bounce" />
+           <strong>Phone</strong>
+           </th>
+            <td>
+              <a href="tel:+91584987950" className="flex items-center text-gray-600">
+                  : (958) 498-7950
+                </a>
+            </td>
+          </tr>
+         </tbody>
+        </table>
+      
+      
+
       </div>
     </div>
   );
