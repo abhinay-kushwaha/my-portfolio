@@ -20,6 +20,7 @@
     "antd": "^5.19.3",
     "aos": "^2.3.4",
     "axios": "^1.7.2",
+    "cors": "^2.8.5",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.3.8",
     "pure-react-carousel": "^1.30.1",
