@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa'; // Import the icons
+import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import axios from 'axios';
+import { toast, ToastContainer } from 'react-toastify'; // Import react-toastify components
+import 'react-toastify/dist/ReactToastify.css'; // Import the styles
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +14,6 @@ const Contact = () => {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,13 +23,12 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus('Submitting...');
 
     try {
       const response = await axios.post('http://localhost:3000/send-email', formData);
       console.log('Form Data Sent:', formData);
       console.log('Response:', response.data);
-      setSubmitStatus('Success! Your message has been sent.');
+      toast.success( "Success!🎉 Your message📨 has been successfully👍 sent to 👦Abhinay."); // Show success toaster
       setFormData({
         name: '',
         email: '',
@@ -37,7 +37,7 @@ const Contact = () => {
       });
     } catch (error) {
       console.error('Error Sending Email:', error);
-      setSubmitStatus('Something went wrong. Please try again.');
+      toast.error('Something went wrong. Please try again.'); // Show error toaster
     } finally {
       setIsSubmitting(false);
     }
@@ -59,9 +59,7 @@ const Contact = () => {
         <form
           onSubmit={handleSubmit}
           className={`bg-white p-6 rounded-lg shadow-lg transition-transform transform ${
-            submitStatus === 'Success! Your message has been sent.' ? 'animate-pulse' : ''
-          } ${
-            submitStatus === 'Something went wrong. Please try again.' ? 'animate-shake' : ''
+            isSubmitting ? 'animate-pulse' : ''
           }`}
         >
           <div className="mb-4">
@@ -132,7 +130,6 @@ const Contact = () => {
           >
             {isSubmitting ? 'Submitting...' : 'Submit'}
           </button>
-          {submitStatus && <p className="mt-4 text-center text-gray-700">{submitStatus}</p>}
         </form>
       </div>
 
@@ -147,42 +144,53 @@ const Contact = () => {
         <h2 className="text-2xl font-semibold mb-4 text-gray-900">Contact Us</h2>
 
         <table>
-         <tbody>
-          <tr>
-            <th className='flex items-center pr-1'>  
-              <FaMapMarkerAlt className="text-blue-500 mr-2 animate-bounce" />
-              <strong>Address</strong>
-            </th>
-            <td> : Vijay Nagar, Indore (M.P.)</td>
-          </tr>
-          <tr>
-            <th className='flex items-center pr-1'> 
-            <FaEnvelope className="text-red-500 mr-2 animate-bounce" />
-            <strong>Email</strong>
-            </th>
-            <td>
+          <tbody>
+            <tr>
+              <th className='flex items-center pr-1'>  
+                <FaMapMarkerAlt className="text-blue-500 mr-2 animate-bounce" />
+                <strong>Address</strong>
+              </th>
+              <td> : Vijay Nagar, Indore (M.P.)</td>
+            </tr>
+            <tr>
+              <th className='flex items-center pr-1'> 
+                <FaEnvelope className="text-red-500 mr-2 animate-bounce" />
+                <strong>Email</strong>
+              </th>
+              <td>
                 <a href="mailto:abhinayark0@gmail.com" className="flex items-center text-gray-600">: 
                   abhinayark0@gmail.com
                 </a>
               </td>
-          </tr>
-          <tr>
-           <th className='flex items-center pr-1'> 
-           <FaPhoneAlt className="text-green-500 mr-2 animate-bounce" />
-           <strong>Phone</strong>
-           </th>
-            <td>
-              <a href="tel:+91584987950" className="flex items-center text-gray-600">
+            </tr>
+            <tr>
+              <th className='flex items-center pr-1'> 
+                <FaPhoneAlt className="text-green-500 mr-2 animate-bounce" />
+                <strong>Phone</strong>
+              </th>
+              <td>
+                <a href="tel:+91584987950" className="flex items-center text-gray-600">
                   : (958) 498-7950
                 </a>
-            </td>
-          </tr>
-         </tbody>
+              </td>
+            </tr>
+          </tbody>
         </table>
-      
-      
-
       </div>
+
+      {/* Toast Container */}
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 };
