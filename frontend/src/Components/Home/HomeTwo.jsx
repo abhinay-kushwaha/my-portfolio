@@ -4,6 +4,7 @@ import '../../App.css'
 import abhi from "../../assets/abhi.jpeg"
 import trophy from "../../assets/trophy.png"
 import circle from "../../assets/circle-img.png"
+import CircleText from './CircleText';
 
 const HomeTwo = () => {
   return (
@@ -28,9 +29,9 @@ const HomeTwo = () => {
                 Success
               </h2>
             </div>
-            <div className='relative left-10 -bottom-12 '>
-              <img className='w-24 spin-slow' src={circle} alt="" />
-            </div>
+           
+          <CircleText/>
+
           </div>
           </div>
 
